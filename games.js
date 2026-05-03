@@ -11,9 +11,9 @@ const games = ` [
   {
     "name": "Cube Monster",
     "description": "Be the first champion to reach the top of Mount Kubia in a solo or competitive engine building strategy game",
-    "pledged": 29446,
+    "pledged": 29446, 
     "goal": 20000,
-    "backers": 321,
+    "backers": 321, 
     "img": "./assets/cube_monster.png"
   },
   {

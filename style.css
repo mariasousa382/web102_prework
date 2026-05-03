@@ -3,6 +3,13 @@
 body {
     font-family: 'Cabin';
     background-color: #758190;
+    margin: 0;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 #tentacles {
@@ -12,24 +19,52 @@ body {
 .header {
     display: flex;
     background-color: lightblue;
-    padding: 1%;
+    padding: 1rem 1.5rem;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    justify-content: flex-start;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero-section {
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.games-section {
+    background-color: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0 2rem;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
     background-color: #a8b0bc;
     border-radius: 7px;
-    padding: 1%;
+    padding: 1rem;
     margin: 1%;
     width: 100%;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -40,6 +75,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 1rem;
+    padding: 0 1rem 2rem;
 }
 
 .game-img {
@@ -50,26 +87,62 @@ body {
 
 .game-card {
     background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
+    padding: 1rem;
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform: translateY(-4px);
 }
 
 #button-container {
     text-align: center;
+    margin: 1rem 0;
 }
 
 button {
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
+    padding: 0.75rem 1rem;
     margin: 1%;
     border-radius: 7px;
+    background-color: #e2e8f0;
+    color: #1f2937;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stats-card {
+        width: 100%;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+
+    .header {
+        padding: 0.75rem 1rem;
+    }
+
+    #tentacles {
+        width: 40px;
+    }
 }
